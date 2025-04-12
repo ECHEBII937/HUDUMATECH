@@ -1,0 +1,70 @@
+<div class="user-purchase">
+    <h3>My Orders</h3> <!-- Updated title -->
+
+    <hr />
+
+    <div class="menu-purchased">
+        <ul class="nav d-flex justify-content-evenly purchased-ul">
+            <li class="nav-item purchased-list list-active" style="list-style: none">
+                <a class="nav-link" href="/pesananSaya/Belum_Dibayar">Pending Payment</a> <!-- Updated text -->
+            </li>
+            <li class="nav-item purchased-list" style="list-style: none">
+                <a class="nav-link" href="/pesananSaya/Diproses">In Process</a> <!-- Updated text -->
+            </li>
+            <li class="nav-item purchased-list" style="list-style: none">
+                <a class="nav-link" href="/pesananSaya/Selesai">Completed</a> <!-- Updated text -->
+            </li>
+            <li class="nav-item slide" style="list-style: none"></li>
+        </ul>
+    </div>
+
+    <hr />
+    <% data.forEach(element => { %>
+        <div class="purchased">
+            <h4>Service: <%= element.service_category %></h4> <!-- Updated text -->
+            <div class="test">
+                <div class="data-patner">
+                    <img class="rounded-circle" src="img/man.png" width="80" height="80" alt="" />
+                    <p>
+                        Handyman: <%= element.tukang.name %> <!-- Updated label -->
+                    </p>
+                </div>
+
+                <div class="detail-purchase">
+                    <h5>Order Details</h5> <!-- Updated heading -->
+                    <div>
+                        <p>Address</p> <!-- Updated text -->
+                        <div class="user-address">
+                            <i title="icon-location" class="fa-solid fa-location-dot"></i>
+                            <p class="user-location">
+                                <%= element.address %>
+                            </p>
+                        </div>
+                    </div>
+
+                    <p>Description: <%= element.description %></p> <!-- Updated text -->
+                </div>
+            </div>
+
+            <div class="order-payment d-flex justify-content-end">
+                <p class="payment-title">Total Payment: KSh. <%= element.payment %></p> <!-- Updated to Kenyan Shilling -->
+                
+                <% if (element.status=='Belum_Dibayar' ) { %>
+                    <a type="button" href="/updatePesanan/Diproses/<%= element.id %>" class="btn text-white btn-pay"
+                        style="background-color: rgba(209, 49, 49, 0.856)"> Pay Now </a> <!-- Updated button text and color -->
+                <% } %>
+                
+                <% if (element.status=='Diproses' ) { %>
+                    <a type="button" href="/updatePesanan/Selesai/<%= element.id %>"
+                        class="btn text-white btn-pay" style="background-color: #3f682c"> Mark as Completed </a> <!-- Updated text -->
+                <% } %>
+                
+                <% if (element.status=='Selesai' ) { %>
+                    <a type="button" href="/feedbacks/<%= element.id_tukang %>"
+                        class="btn text-white btn-pay" style="background-color: #946917"> Leave Feedback </a> <!-- Updated text -->
+                <% } %>
+            </div>
+        </div>
+    <% }) %>
+</div>
+</div>

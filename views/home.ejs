@@ -1,0 +1,164 @@
+<!-- Hero Section -->
+<div class="hero">
+    <div class="hero__inner">
+        <h1 class="hero__title">Welcome to HUDUMATECH</h1> <!-- Updated title -->
+        <p class="hero__tagline">Easier your work with trusted professionals</p> <!-- Updated tagline -->
+    </div>
+</div>
+
+<!-- Services Section -->
+<div class="services container px-5" id="services">
+    <h2 class="servicesTitle">Our Services</h2> <!-- Updated title -->
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <a class="text-body" href="/orderTukang/elektronik" style="text-decoration: none;">
+                <img class="rowimg" src="img/elektronik.png" alt="">
+                <p>Electronics</p> <!-- Updated text -->
+            </a>
+        </div>
+
+        <div class="col-md-4 text-center">
+            <a class="text-body" href="/orderTukang/bangunan" style="text-decoration: none;">
+                <img class="rowimg" src="img/bangunan.png" alt="">
+                <p>Construction</p> <!-- Updated text -->
+            </a>
+        </div>
+        <div class="col-md-4 text-center">
+            <a class="text-body" href="/orderTukang/furniture" style="text-decoration: none;">
+                <img class="rowimg" src="img/furniture.png" alt="">
+                <p>Furniture</p>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <a class="text-body" href="/orderTukang/otomotif" style="text-decoration: none;">
+                <img class="rowimg" src="img/otomotif.png" alt="">
+                <p>Automotive</p> <!-- Updated text -->
+            </a>
+        </div>
+        <div class="col-md-4 text-center">
+            <a class="text-body" href="/orderTukang/cleaning" style="text-decoration: none;">
+                <img class="rowimg" src="img/cleaning.png" alt="">
+                <p>Cleaning</p>
+            </a>
+        </div>
+        <div class="col-md-4 text-center">
+            <img class="rowimg" src="img/lainnya.png" alt="">
+            <p>Other</p> <!-- Updated text -->
+        </div>
+    </div>
+</div>
+
+<!-- About Us Section -->
+<div class="container" id="about">
+    <hr class="featurette-divider">
+    <div class="row featurette">
+        <div class="aboutBanner col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">About <mark class="bg-info text-white">HUDUMATECH</mark></h2> <!-- Updated name -->
+            <p class="lead">HUDUMATECH offers a wide range of professional services, making it easy for you to find the right handyman for the job.</p> <!-- Updated description -->
+        </div>
+        <div class="col-md-5 text-center">
+            <img src="img/hudumatech_logo.png" class="imgIcons" alt=""> <!-- Updated logo -->
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading fw-normal lh-1 text-center">Why Choose <mark class="bg-info text-white">HUDUMATECH</mark></h2>
+                <div class="advantagesHUDUMATECH">
+                    <ul>
+                        <li><span class="dot"></span> Experienced handymen</li>
+                        <li><span class="dot"></span> Find the best professional for your needs</li>
+                        <li><span class="dot"></span> 24/7 customer support</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-5 order-md-1 text-center">
+                <img src="img/advantages.png" class="imgIcons" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Guide Section -->
+    <h2 class="orderGuide-title">How to Order</h2>
+    <div class="orderGuide">
+        <div class="column featurette">
+            <div class="col-md">
+                <div class="row">
+                    <div class="orderGuideContent col-lg-4 text-center">
+                        <img class="orderGuiderounded-circle" src="img/kategori.png" width="140" height="140">
+                        <p>1. Select a service category</p>
+                    </div>
+                    <div class="orderGuideContent col-lg-4 text-center">
+                        <img class="rounded-circle" src="img/form.png" width="140" height="140">
+                        <p>2. Fill in the order form</p>
+                    </div>
+
+                    <div class="orderGuideContent col-lg-4 text-center">
+                        <img class="rounded-circle" src="img/debit-card.jpg" width="140" height="140">
+                        <p>3. Make the payment</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="deskripsi-orderGuide">
+                    <h2 class="featurette-heading fw-normal lh-1">Find Trusted Handyman Services Now</h2> <!-- Updated text -->
+                    <p class="lead">Get professional services for your home and office with HUDUMATECH.</p>
+                    <a href="#services" type="submit" class="btn active btn-outline-secondary">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Testimonials Section -->
+<div class="testimoniBanner">
+    <h2 class="testimoniBannerTitle fs-1">Customer Testimonials</h2> <!-- Updated title -->
+</div>
+<div class="testimoniContent container">
+    <div class="row">
+        <% fb.forEach(element => { %>
+            <div class="col-lg-4 text-center">
+                <img class="rounded-circle" src="img/user.png" width="140" height="140" alt="">
+                <h3 class="testimoniContentTitle fw-normal">
+                    <%= element.pemesan.name %>
+                </h3>
+                <p>
+                    <%= element.review %>
+                </p>
+            </div>
+        <% }) %>
+    </div>
+</div>
+
+<!-- About Us Section -->
+ <!-- About Us Section with Kenyan and Eldoret Team -->
+<div class="about">
+    <h1 class="aboutTitle">Meet Our Team</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 text-center text-white">
+                <img class="rounded-circle" src="img/emmanuel.jpg" width="140" height="140" alt="">
+                <h3 class="testimoniContentTitle fw-normal">Emmanuel Kibiwott Chebii <a href="https://linktr.ee/izdiharalwin" style="text-decoration: none; color: white;">🡢</a></h3>
+                <p>Student at Kenya School Of TVET, Nairobit, Kenya</p> <!-- Updated to a local university -->
+            </div>
+            <div class="col-lg-3 text-center text-white">
+                <img class="rounded-circle" src="img/boneface.jpg" width="140" height="140" alt="">
+                <h3 class="testimoniContentTitle fw-normal">Boneface Moreke <a href="https://www.linkedin.com/in/aurel-chesya-berliana-b27728151" style="text-decoration: none; color: white;">🡢</a></h3>
+                <p>Student at Moi University, Eldoret, Kenya</p> <!-- Updated to Moi University -->
+            </div>
+            <div class="col-lg-3 text-center text-white">
+                <img class="rounded-circle" src="img/aidil.jpg" width="140" height="140" alt="">
+                <h3 class="testimoniContentTitle fw-normal">Cecil Tomno <a href="https://www.linkedin.com/in/aidil-fatriansyah-6120a9220/" style="text-decoration: none; color: white;">🡢</a></h3>
+                <p>Student at Rift Valley Technical Training Institute,, Kenya</p> <!-- Updated to a local university -->
+            </div>
+            <div class="col-lg-3 text-center text-white">
+                <img class="rounded-circle" src="img/lutfhi.jpg" width="140" height="140" alt="">
+                <h3 class="testimoniContentTitle fw-normal">Lutfhi Adam <a href="https://www.linkedin.com/in/lutfhi-adam-alghani-870283243/" style="text-decoration: none; color: white;">🡢</a></h3>
+                <p>Student at University of Nairobi (UON), Nairobi, Kenya</p> <!-- Updated to UON, a well-known university -->
+            </div>
+        </div>
+    </div>
+</div>

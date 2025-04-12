@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="card-body">
+        <div class="table-responsive">
+            <div class="header_table">
+                <p>Order Data</p> <!-- Changed to "Order Data" -->
+            </div>
+            <div class="table_field">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead class="data-table">
+                        <tr>
+                            <th>No</th>
+                            <th>Customer Name</th> <!-- Changed "Pemesan" to "Customer Name" -->
+                            <th>Address</th>
+                            <th>Service Category</th> <!-- Changed "Kategori Layanan" to "Service Category" -->
+                            <th>Description</th>
+                            <th>Handyman Name</th> <!-- Changed "Nama Tukang" to "Handyman Name" -->
+                            <th>Total Payment</th> <!-- Changed "Total Pembayaran" to "Total Payment" -->
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% let no = 1; data.forEach(element => { %>
+                            <tr>
+                                <th scope="row"><%= no %></th>
+                                <td><%= element.pemesan.name %></td> <!-- Customer Name -->
+                                <td><%= element.address %></td>
+                                <td><%= element.service_category %></td> <!-- Service Category -->
+                                <td><%= element.description %></td>
+                                <td><%= element.tukang.name %></td> <!-- Handyman Name -->
+                                <td><%= element.payment %></td> <!-- Total Payment -->
+                                <td>
+                                    <a type="button" href="/pesanan/delete/<%= element.id %>" class="btn btn-danger">Delete</a>
+                                </td>
+                            </tr>
+                        <% no++ }) %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

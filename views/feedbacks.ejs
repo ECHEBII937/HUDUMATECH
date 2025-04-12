@@ -1,0 +1,30 @@
+<main tabindex="0" id="maincontent" class="review-form">
+    <div class="feedback-container flex">
+        <h1 class="title">
+            <img src="/img/hudumatech_logo.png" alt="HUDUMATECH logo" /> <!-- Updated logo -->
+            Customer Feedback
+        </h1>
+        <p class="subtitle">How was your experience with our service?</p> <!-- Updated subtitle -->
+
+        <form action="/addFeedbacks" method="post">
+            <input type="hidden" name="id_tukang" value="<%= data.id_tukang %>">
+            <input type="hidden" name="id_users" value="<%= token.id %>">
+            
+            <div class="add flex" autocomplete="off">
+                <div class="input-group-review">
+                    <input type="text" name="review" class="review" placeholder="Write your review here..." required />
+                    <button type="submit" class="btn-submit" style="background-color: #1F4F6C;">Submit</button> <!-- Updated button color -->
+                </div>
+
+                <div class="message">Review must be at least 10 characters</div> <!-- Updated message -->
+            </div>
+        </form>
+
+        <!-- Display existing feedback -->
+        <% fb.forEach(element => { %>
+            <div class="feedback">
+                <p><strong><%= element.pemesan.name %>:</strong> <%= element.review %></p> <!-- Display customer name and feedback -->
+            </div>
+        <% }) %>
+    </div>
+</main>

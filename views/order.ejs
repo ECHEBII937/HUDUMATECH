@@ -1,0 +1,29 @@
+<main tabindex="0" id="maincontent">
+    <div class="listtukang container">
+        <div class="row">
+            <p class="listtukangTitle fs-1">
+                Handyman List
+            </p>
+            <% data.forEach(element => { %>
+                <div class="listtukangCol col-lg-3 text-center text-black">
+                    <div class="listtukangContent">
+                        <!-- Use the handyman's actual image if available, else use a generic image -->
+                        <img class="rounded-circle" src="img/man.png" width="140" height="140" alt="Handyman Image">
+                        <h3 class="listtukangContentTitle fw-normal">
+                            <%= element.name %>
+                        </h3>
+                        <p>
+                            <%= element.address %> <!-- Display Handyman's Address -->
+                        </p>
+                        <p>
+                            <%= element.phone %> <!-- Display Handyman's Phone Number -->
+                        </p>
+                        <a href="/detailOrder/<%= element.id %>" type="button" class="btn btn-primary" style="background-color: #1F4F6C;">
+                            Select Handyman
+                        </a> <!-- Updated button text -->
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</main>
